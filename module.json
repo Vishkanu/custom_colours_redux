@@ -1,0 +1,15 @@
+
+{
+  "id": "custom-colours-redux",
+  "title": "Custom Colours for Roll Results",
+  "description": "Changes the colors of criticals, successes, and failures in chat rolls.",
+  "version": "1.0.0",
+  "authors": [{ "name": "Michael Leggett" }],
+  "compatibleCoreVersion": "12",
+  "minimumCoreVersion": "11",
+  "esmodules": ["scripts/custom_colours_redux.js"],
+  "styles": ["styles/custom_colours_redux.css"],
+  "manifest": "https://yourdomain.com/color-tweaks/module.json",
+  "download": "https://yourdomain.com/color-tweaks.zip",
+  "license": "MIT"
+}
