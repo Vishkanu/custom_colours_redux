@@ -1,1 +1,26 @@
 
+/* styles/color-tweaks.css */
+
+/* Critical Success */
+.dice-roll.critical.success {
+  background-color: #00ff99 !important;
+  color: #001a0f !important;
+}
+
+/* Success */
+.dice-roll.success:not(.critical) {
+  background-color: #33ccff !important;
+  color: #002233 !important;
+}
+
+/* Failure */
+.dice-roll.failure:not(.critical) {
+  background-color: #ff9933 !important;
+  color: #331a00 !important;
+}
+
+/* Critical Failure */
+.dice-roll.critical.failure {
+  background-color: #ff3333 !important;
+  color: #330000 !important;
+}
