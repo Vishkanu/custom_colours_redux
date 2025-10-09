@@ -3,6 +3,7 @@ Hooks.once('init', () => {
 
     game.settings.register("custom-colours-redux", "criticalSuccessColor", {
     name: "Critical Success Color",
+    hint: "This color is used for critical success messages.",
     scope: "client",
     config: true,
     type: String,
@@ -11,6 +12,7 @@ Hooks.once('init', () => {
   });
   game.settings.register("custom-colours-redux", "successColor", {
     name: "Success Color",
+    hint: "This color is used for normal success messages.",
     scope: "client",
     config: true,
     type: String,
@@ -19,6 +21,7 @@ Hooks.once('init', () => {
   });
   game.settings.register("custom-colours-redux", "failureColor", {
     name: "Failure Color",
+    hint: "This color is used for normal failure messages.",
     scope: "client",
     config: true,
     type: String,
@@ -27,6 +30,7 @@ Hooks.once('init', () => {
   });
   game.settings.register("custom-colours-redux", "criticalFailureColor", {
     name: "Critical Failure Color",
+    hint: "This color is used for critical failure messages.",
     scope: "client",
     config: true,
     type: String,
