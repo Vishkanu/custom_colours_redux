@@ -3,7 +3,7 @@ name: Deploy Foundry Module to GitHub Pages
 on:
   push:
     tags:
-      - 'v*'   # triggers when you push a tag like v1.2.3
+      - 'v*'
 
 jobs:
   deploy:
@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install jq
-        run: sudo apt-get install -y jq
+        run: sudo apt-get install -y jq zip
 
       - name: Set version from tag
         id: vars
@@ -33,5 +33,8 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
           publish_branch: gh-pages
+          publish_dir: .
+          allow_empty_commit: false
+          keep_files: false
+          enable_jekyll: false
