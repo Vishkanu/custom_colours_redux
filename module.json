@@ -1,0 +1,29 @@
+{
+  "id": "custom-colours-redux",
+  "title": "Custom Colours Redux",
+  "version": "1.0.1",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "description": "<p>Change the colors of roll outcome results in chat</p>",
+  "authors": [
+    {
+      "name": "Michael :D",
+      "email": "",
+      "flags": {}
+    }
+  ],
+  "esmodules": [
+    "scripts/chat-colors.js"
+  ],
+  "styles": [
+    "styles/chat-colors.css"
+  ],
+  "flags": {
+    "canUpload": true
+  },
+  "manifest": "https://vishaknu.github.io/custom-colours-redux/module.json",
+  "download": "https://vishaknu.github.io/custom-colours-redux/custom-colours-redux.zip",
+  "readme": "https://vishaknu.github.io/custom-colours-redux/README.md"
+}

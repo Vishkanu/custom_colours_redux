@@ -1,0 +1,13 @@
+/* Module CSS */
+.attack-roll-result.success {
+  color: pink !important;
+}
+.attack-roll-result.failure {
+  color: gray !important;
+}
+.attack-roll-result.critical-success {
+  color: red !important;
+}
+.attack-roll-result.critical-failure {
+  color: darkred !important;
+}
