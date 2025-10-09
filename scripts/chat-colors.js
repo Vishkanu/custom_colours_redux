@@ -1,6 +1,14 @@
 Hooks.once('init', () => {
   console.log("Custom Colours Redux | Init hook triggered");
 
+    game.settings.register("custom-colours-redux", "criticalSuccessColor", {
+    name: "Critical Success Color",
+    scope: "client",
+    config: true,
+    type: String,
+    default: "#ff0000",
+    onChange: () => { console.log("Critical Success color changed"); applyColors(); }
+  });
   game.settings.register("custom-colours-redux", "successColor", {
     name: "Success Color",
     scope: "client",
@@ -16,14 +24,6 @@ Hooks.once('init', () => {
     type: String,
     default: "#808080",
     onChange: () => { console.log("Failure color changed"); applyColors(); }
-  });
-  game.settings.register("custom-colours-redux", "criticalSuccessColor", {
-    name: "Critical Success Color",
-    scope: "client",
-    config: true,
-    type: String,
-    default: "#ff0000",
-    onChange: () => { console.log("Critical Success color changed"); applyColors(); }
   });
   game.settings.register("custom-colours-redux", "criticalFailureColor", {
     name: "Critical Failure Color",
