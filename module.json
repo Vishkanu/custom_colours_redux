@@ -18,5 +18,8 @@
   "styles": ["styles/chat-colors.css"],
   "flags": {
     "canUpload": true
-  }
+  },
+  "manifest": "https://vishaknu.github.io/custom-colours-redux/module.json",
+  "download": "https://vishaknu.github.io/custom-colours-redux/custom-colours-redux.zip",
+  "readme": "https://vishaknu.github.io/custom-colours-redux/README.md"
 }

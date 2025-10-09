@@ -1,0 +1,37 @@
+name: Deploy Foundry Module to GitHub Pages
+
+on:
+  push:
+    tags:
+      - 'v*'   # triggers when you push a tag like v1.2.3
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      - name: Set version from tag
+        id: vars
+        run: echo "version=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+
+      - name: Update module.json version
+        run: |
+          jq '.version = "${{ steps.vars.outputs.version }}"' module.json > module.tmp && mv module.tmp module.json
+
+      - name: Zip module
+        run: |
+          zip -r custom-colours-redux.zip . -x "*.git*" ".*" ".github/*"
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
