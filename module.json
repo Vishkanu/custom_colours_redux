@@ -1,7 +1,7 @@
 {
   "id": "custom-colours-redux",
   "title": "Custom Colours Redux",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": {
     "minimum": "13",
     "verified": "13"
@@ -19,7 +19,7 @@
   "flags": {
     "canUpload": true
   },
-  "manifest": "https://vishaknu.github.io/custom-colours-redux/module.json",
-  "download": "https://vishaknu.github.io/custom-colours-redux/custom-colours-redux.zip",
-  "readme": "https://vishaknu.github.io/custom-colours-redux/README.md"
+  "manifest": "https://vishaknu.github.io/custom_colours_redux/module.json",
+  "download": "https://vishaknu.github.io/custom_colours_redux/custom-colours-redux.zip",
+  "readme": "https://vishaknu.github.io/custom_colours_redux/README.md"
 }
